@@ -2,6 +2,7 @@
 *.pdb
 *.o
 help.md
+*.sh
 
 # Added by cargo
 
