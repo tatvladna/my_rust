@@ -92,7 +92,6 @@ pub fn composite_datatype() {
     match n {
         n if n % 2 == 0 => println!("Even number"),
         n if n % 2!= 0 => println!("Odd number"),
-        0 => println!("Zero"),
         _ => println!("Unknown number"),
     }
 
