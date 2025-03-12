@@ -35,6 +35,34 @@ pub fn ownership() {
         println!("number = {}", number);
     }
 
+
+    let mut my_age = 20;
+    println!("Сегодня мне {}", my_age);
+
+    // lля изменения глобально йпеременной нужно указать mut перед лямбда-функцией
+    let mut my_hp = || {
+        println!("С днем рождения меня!");
+        my_age += 1;
+    };
+    my_hp();
+    my_hp();
+    my_hp();
+    println!("Сегодня мне {}", my_age);
+
+    // FnOnce: gjлное владение захваченными переменными
+    let gm = String::from("Привет");
+    println!("{}", gm);
+    let l_gm = || {
+        let mut s = gm;
+        s.push_str("!");
+    };
+
+    l_gm();
+
+
+
+
+
 }
 
 
