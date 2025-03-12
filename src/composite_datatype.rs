@@ -88,6 +88,14 @@ pub fn composite_datatype() {
     let animal = create_animal("Lion".to_string(), "Cat".to_string(), 2);
     println!("name = {}, type_animal = {}, age = {}", animal.name, animal.type_animal, animal.age);
 
+    let n = 10;
+    match n {
+        n if n % 2 == 0 => println!("Even number"),
+        n if n % 2!= 0 => println!("Odd number"),
+        0 => println!("Zero"),
+        _ => println!("Unknown number"),
+    }
+
 
 
 }
