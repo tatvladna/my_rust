@@ -94,16 +94,11 @@ pub fn basic_datatype() {
     println!("{:?}", arr1);
 
 
-    let light = traffic_light::Red;
-
-    match light {
-        traffic_light::Red => println!("Stop!"),
-        traffic_light::Yellow => println!("Caution!"),
-        traffic_light::Green => println!("Go!"),
-    }
-
-
     bank::value();
+
+    for i in 1..5 {
+        println!("Hello, {}", i);
+    }
 
 }
 
@@ -124,11 +119,6 @@ fn disp_compl((name, age): (&str, u32))  {
     println!("Имя: {}, Возраст: {}", name, age);
 }
 
-enum traffic_light {
-    Red,
-    Yellow,
-    Green,
-}
 
 mod bank {
     pub fn value() {
