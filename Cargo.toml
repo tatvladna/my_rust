@@ -1,6 +1,11 @@
+[[bin]]
+name = "my_rust"
+path = "main.rs"
+
 [package]
 name = "my_rust"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+
