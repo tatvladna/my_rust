@@ -24,6 +24,17 @@ pub fn ownership() {
     let res = *p_num > 100; // в сложных операциях нужно разыменовать *
     println!("Больше ли 100: {}", res);
 
+    {
+        println!("Если хотим изменять ссылки, то нужно передавать их с параметром mut");
+        let mut number = 100;
+            { 
+            let p_number = &mut number;
+            *p_number = 999;
+            println!("p_number = {}", p_number);
+            }
+        println!("number = {}", number);
+    }
+
 }
 
 
