@@ -10,3 +10,6 @@ pub use ownership::*;
 
 pub mod oop;
 pub use oop::*;
+
+pub mod link_lifetime;
+pub use link_lifetime::*;
