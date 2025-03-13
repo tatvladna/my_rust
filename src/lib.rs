@@ -13,3 +13,6 @@ pub use oop::*;
 
 pub mod link_lifetime;
 pub use link_lifetime::*;
+
+pub mod collections;
+pub use collections::*;
