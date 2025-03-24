@@ -56,7 +56,9 @@ pub fn ownership_borrowing() {
     let mut str1 = Foo {data: "rrrrrrr".to_string()};
     let mut str2 = Foo {data: "uuuuuuuuuuuuuuuuuuuu".to_string()};
     let res_strs = hard_time_live(&mut str1, &mut str2);
-    println!("{:?}", res_strs);
+    let (res_str1, res_str2) = res_strs;
+    println!("{:?}", res_str1);
+    println!("{:?}", res_str2);
 
 
 
@@ -83,10 +85,10 @@ struct Foo {
     data: String
 }
 
-fn hard_time_live<'a, 'b>(data1: &'a mut Foo, data2: &'b mut Foo) -> &'b Foo {
+fn hard_time_live<'a, 'b>(data1: &'a mut Foo, data2: &'b mut Foo) -> (&'a Foo, &'b Foo) {
     data1.data.push_str("==================");
     data2.data.push_str("------------------");
 
-    return data2;
+    return (data1, data2);
 }
 
