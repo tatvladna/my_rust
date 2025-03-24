@@ -1,6 +1,6 @@
 [[bin]]
 name = "my_rust"
-path = "main.rs"
+path = "src/main.rs"
 
 [package]
 name = "my_rust"
