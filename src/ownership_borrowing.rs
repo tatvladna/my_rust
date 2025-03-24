@@ -50,7 +50,13 @@ pub fn ownership_borrowing() {
 
     let mut exp_str = String::from("Home");
     let new_str = time_live(&mut exp_str);
-    println!("{}", new_str)
+    println!("{}", new_str);
+
+
+    let mut str1 = Foo {data: "rrrrrrr".to_string()};
+    let mut str2 = Foo {data: "uuuuuuuuuuuuuuuuuuuu".to_string()};
+    let res_strs = hard_time_live(&mut str1, &mut str2);
+    println!("{:?}", res_strs);
 
 
 
@@ -70,5 +76,17 @@ fn return_owner() -> String {
 fn time_live<'a>(ex_str: &'a mut String) -> &'a String {
     ex_str.push_str("~~~~~~~~~~");
     return ex_str;
+}
+
+#[derive(Debug)]
+struct Foo {
+    data: String
+}
+
+fn hard_time_live<'a, 'b>(data1: &'a mut Foo, data2: &'b mut Foo) -> &'b Foo {
+    data1.data.push_str("==================");
+    data2.data.push_str("------------------");
+
+    return data2;
 }
 
