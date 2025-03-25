@@ -1,3 +1,6 @@
+static MY_AGE: i32 = 23;
+const SALARY_JUNIOR_DEVELOPER:usize = 70000;
+
 pub fn ownership_borrowing() {
     println!("============ Владение и заимствование ===============");
 
@@ -60,6 +63,27 @@ pub fn ownership_borrowing() {
     println!("{:?}", res_str1);
     println!("{:?}", res_str2);
 
+    let age_secret: &'static i32 = &MY_AGE;
+    println!("{}", age_secret);
+
+    
+    // static mut MSG_SECRET: &'static str = "This is a secret";
+    // unsafe {
+    //     println!("Секрет: {}", MSG_SECRET);
+    //     MSG_SECRET = "This is a new secret: Ты молодой и только учишься!";
+    //     println!("Секрет после изменения: {}", MSG_SECRET);
+    // }
+
+
+    // время жизни особенно нужно указыать в струткруах, функциях
+    let job = Job {
+        title: "Junior Developer",
+        salary: &SALARY_JUNIOR_DEVELOPER,
+    };
+    println!("{:?}", job);
+    println!("Зарплата {}: {}", job.title, job.salary);
+
+
 
 
 
@@ -90,5 +114,12 @@ fn hard_time_live<'a, 'b>(data1: &'a mut Foo, data2: &'b mut Foo) -> (&'a Foo, &
     data2.data.push_str("------------------");
 
     return (data1, data2);
+}
+
+
+#[derive(Debug)]
+struct Job<'a> {
+    title: &'a str,
+    salary: &'a usize,
 }
 
