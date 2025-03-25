@@ -6,7 +6,7 @@
 
 **Умные указатели:**
 
-![e](/img/ref.png)
+![](./img/ref.png)
 
 
 <div align="center">
