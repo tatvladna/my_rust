@@ -6,7 +6,8 @@
 
 **Умные указатели:**
 
-![](/img/ref.png)
+![e](/img/ref.png)
+
 
 <div align="center">
 <img src="https://ucarecdn.com/0a06dee8-6d8f-4b05-b7c2-156960af2277/" title="Rust" alt="Rust" width="250" height="210">
