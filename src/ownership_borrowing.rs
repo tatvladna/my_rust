@@ -66,13 +66,6 @@ pub fn ownership_borrowing() {
     let age_secret: &'static i32 = &MY_AGE;
     println!("{}", age_secret);
 
-    
-    // static mut MSG_SECRET: &'static str = "This is a secret";
-    // unsafe {
-    //     println!("Секрет: {}", MSG_SECRET);
-    //     MSG_SECRET = "This is a new secret: Ты молодой и только учишься!";
-    //     println!("Секрет после изменения: {}", MSG_SECRET);
-    // }
 
 
     // время жизни особенно нужно указыать в струткруах, функциях

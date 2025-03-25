@@ -6,6 +6,7 @@ path = "src/main.rs"
 name = "my_rust"
 version = "0.1.0"
 edition = "2024"
+include = ["hello.html"]
 
 [dependencies]
 
